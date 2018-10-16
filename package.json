@@ -1,0 +1,54 @@
+{
+  "name": "@qc/google-geocoding-service",
+  "version": "0.0.0-alpha",
+  "description": "Makes using the Google Geocoding API easy to use.",
+  "keywords": [
+    "geocode",
+    "geocoder",
+    "geocoding",
+    "google"
+  ],
+  "author": {
+    "name": "Danny Hurlburt",
+    "url": "https://github.com/dhurlburtusa"
+  },
+  "homepage": "https://github.com/dhurlburtusa/qc-google-geocoding-service",
+  "license": "ISC",
+  "engines": {
+    "node": ">=7.4.0",
+    "npm": ">=4.0.0"
+  },
+  "files": [
+    "lib/"
+  ],
+  "main": "lib/index.js",
+  "bugs": {
+    "url": "https://github.com/dhurlburtusa/qc-google-geocoding-service/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhurlburtusa/qc-google-geocoding-service.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run build:cjs",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src -d lib/",
+    "clean": "rimraf lib/",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run clean && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "cross-fetch": "^2.2.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.7.0",
+    "rimraf": "^2.6.2"
+  }
+}

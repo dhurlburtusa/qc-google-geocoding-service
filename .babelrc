@@ -1,0 +1,15 @@
+{
+  "env": {
+    "cjs": {
+      "ignore": [
+        "__tests__"
+      ],
+      "plugins": [
+        "transform-object-rest-spread"
+      ],
+      "presets": [
+        "env"
+      ]
+    }
+  }
+}
